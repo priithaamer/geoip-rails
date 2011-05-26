@@ -12,7 +12,12 @@ In your Rails app, `Geoip::Location` model is available. To get the location inf
 
     Geoip::Location.find_by_ip('123.123.123.123')
     # => #<Geoip::Location id: 33447, country: "EE", region: "18", city: "Tartu", postal_code: 0, latitude: 58.3661, longitude: 26.7361, metro_code: 0, area_code: 0>
-    
+
+This method also accepts block that will be called when location is found by given ip address:
+
+    Geoip::Location.find_by_ip('123.123.123.123') do |location|
+      puts "I know that you live in #{location.city}"
+    end
 
 ## TODO
 
