@@ -26,6 +26,8 @@ See [GitHub issues list](https://github.com/priithaamer/geoip-rails/issues).
 ## Database schema
 
     CREATE DATABASE geoip;
+    
+    USE geoip;
 
     CREATE TABLE blocks (
       ip_poly      POLYGON       NOT NULL,
